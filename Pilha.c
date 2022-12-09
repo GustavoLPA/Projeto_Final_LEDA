@@ -126,6 +126,8 @@ int main(void)
   pilha *STACK;
   STACK = (struct pilha *)calloc(1, sizeof(struct pilha));
 
+  iniciarPilha(STACK);
+
   if (STACK == NULL)
   {
     printf("Erro durante a alocacao\n");
@@ -182,12 +184,13 @@ int main(void)
     }
     else if (opc == 0)
     {
+      system("clear || cls");
       printf("\n---------- Finalizado ----------");
       break;
     }
     else
     {
-      printf("\n!!! Digite uma opção válida !!!\n");
+      printf("\n!!! Digite uma opcao valida !!!\n");
     }
   }
   return 0;
